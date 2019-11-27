@@ -1,0 +1,17 @@
+doctype html
+html
+ head
+  title Question page
+  link(href='../public/css/style.css', rel='stylesheet')
+  script(src='../public/css/style.css')
+ body(style="background-color:#99ff99;")
+  center
+   h1(style="color:#006600;font-size:30px; font-family: system-ui;") All Questions
+   ul 
+    each arrays , i in ques
+     li
+      h3 #{arrays.Desc}
+      form(method='Post' , action ='/editques/'+arrays._id)
+       input.btn(type='submit' , value='Delete')
+      hr
+   

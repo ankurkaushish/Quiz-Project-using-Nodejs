@@ -1,0 +1,21 @@
+doctype html
+html
+ head
+  title Question page
+  link(href='../public/css/style.css', rel='stylesheet')
+  script(src='../public/css/style.css')
+ body(style="background-color:#99ff99;")
+  h3 Score : #{total}
+  center
+   h1(style="color:#006600;font-size:30px; font-family: system-ui;") Hello #{name}
+   h1(style="color:#006600;font-size:80px; font-family: system-ui;") Questions:
+   ul 
+    each arrays , i in array
+     li
+      a(style="font-size:30px" href='/quiz123/'+userid+'/ques/'+arrays._id)= arrays.Desc
+      hr
+  br
+  br
+      
+  form(action='/login' method='GET')
+    input(type='Submit' value='Logout')   

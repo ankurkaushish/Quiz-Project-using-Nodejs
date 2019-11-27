@@ -1,0 +1,29 @@
+doctype html
+html
+ head
+  title Question page
+  link(href='../public/css/style.css')
+ body(style="background-color:#99ff99;")
+  center 
+   h4(style="color:#006600;font-size:20px; font-family: system-ui;") Subject: #{q.Title}
+   h1(style="color:#006600;font-size:60px;") #{q.Desc}
+   h5(style="color:#006600;font-size:30px;")  Options:
+   form(method='GET' , action ='/quiz123/'+userid+'/question/'+q._id)
+    lable(style="color:#006600;font-size:20px;")  #{q.op1}
+     input(  name='response' ,type='radio' ,value = q.op1 )
+    br
+    lable(style="color:#006600;font-size:20px;")  #{q.op2}
+     input( name='response' ,type='radio' ,value = q.op2  )
+    br
+    lable(style="color:#006600;font-size:20px;")  #{q.op3}
+     input( name='response' ,type='radio' ,value = q.op3 )
+    br
+    lable(style="color:#006600;font-size:20px;")  #{q.op4}
+     input( name='response' ,type='radio' ,value = q.op4 )
+    br
+    br
+    input.btn(type='submit' , value='Submit')
+  
+
+
+   
